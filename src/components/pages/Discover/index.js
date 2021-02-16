@@ -33,7 +33,7 @@ export default class Discover extends Component {
                 <div className="row justify-content-center">
                     <div className="col-sm-12 col-m-8 col-l-6 col-xl-4">
                     <h1>Made friends with {this.state.matchCount} pups so far!</h1>
-                    <Card image={this.state.image} handleThumbsUp={this.handleThumbsUp} />
+                    <Card image={this.state.image} handleThumbsUp={this.handleThumbsUp} handleThumbDown={this.getNewPup} />
                     <Alert style={{ opacity: this.state.match ? 1 : 0 }} type="success">Hooray! They Like You, Too!</Alert>
                     </div>
                 </div>

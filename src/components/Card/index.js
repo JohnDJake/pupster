@@ -12,11 +12,9 @@ export default function Card(props) {
       {!props.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
       <CardBttn
         onClick={props.handleThumbsUp}
-        data-value="pass"
       />
       <CardBttn
-        onClick={props.handleThumbsUp}
-        data-value="pick"
+        onClick={props.handleThumbsDown}
       />
     </div>
   );
