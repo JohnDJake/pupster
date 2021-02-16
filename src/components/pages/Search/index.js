@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import API from "../../../utils/API"
 import SearchForm from "../../SearchForm"
-// import SearchResultContainer from "../../SearchResultContainer"
+import SearchResultContainer from "../../SearchResultContainer"
 
 export default class Search extends Component {
     state = {
@@ -22,18 +22,19 @@ export default class Search extends Component {
     handleFormSubmit = event =>{
         event.preventDefault();
         API.search(this.state.search)
-        .then(res=>{this.setState({results: res.data.message})})
-        .catch(err => this.setState({ error: err.message }));
+        .then(res=> this.setState({results: res.data.message}))
+        .catch(err => console.log(err));
     }
 
     render() {
         return (
             <div>
-                <h1>Search for your favorite dog breed:</h1>
+                <h3>Search for your favorite dog breed:</h3>
                 <SearchForm
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}
                 />
+                <SearchResultContainer results={this.state.results}/>
             </div>
         )
     }
