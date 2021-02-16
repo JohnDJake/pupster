@@ -1,5 +1,5 @@
 import React from "react";
-import SearchResultCard from "./SearchResultCard"
+import SearchResultCard from "../SearchResultCard/SearchResultCard"
 
 function SearchResultContainer(props) {
 
