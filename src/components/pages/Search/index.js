@@ -22,8 +22,8 @@ export default class Search extends Component {
     handleFormSubmit = event =>{
         event.preventDefault();
         API.search(this.state.search)
-        .then(res=>{this.setState({results: res.data.message})})
-        .catch(err => this.setState({ error: err.message }));
+        .then(res=> this.setState({results: res.data.message}))
+        .catch(err => console.log(err));
     }
 
     render() {
