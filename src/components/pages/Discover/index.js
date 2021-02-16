@@ -5,7 +5,7 @@ export default class Discover extends Component {
     state = { image: "", friends: 0 };
 
     componentDidMount() {
-        API.random().then(({ data: { message } }) => this.setState({ image: message }));
+        this.getNewPup();
     }
 
     getNewPup() {
