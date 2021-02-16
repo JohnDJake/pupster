@@ -5,14 +5,24 @@ import SearchForm from "..components/SearchForm"
 export default class Search extends Component {
     state = {
         search: "",
-        results: [],
-        breeds: []
+        results: []
     }
 
     componentDidMount(){
         API.search("labrador")
-        .then(res=> this.setState({breeds: res.data.message}))
+        .then(res=> this.setState({results: res.data.message}))
         .catch(err=> console.log(err))
+    }
+
+    handleInputChange = event => {
+        this.setState({ search: event.target.value });
+    };
+
+    handleFormSubmit = event =>{
+        event.preventDefault();
+        API.search(this.state.search)
+        .then(this.setState({results: res.data.message}))
+        .catch(err => this.setState({ error: err.message }));
     }
 
     render() {
