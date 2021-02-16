@@ -1,0 +1,23 @@
+.card-btn {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border: none;
+    bottom: 10%;
+    color: #FFF;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: FontAwesome;
+    outline: none;
+  }
+  
+  .thumbsDown {
+    left: 1%;
+    background: #E53935;
+  }
+  
+  .thumbsUp {
+    right: 1%;
+    background: #43A047;
+  }
