@@ -12,7 +12,7 @@ function SearchResultCard(props) {
           <li>
             <strong>Name:</strong> {props.name}
           </li>
-          </ul>
+        </ul>
       </div>
       {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
         𝘅
