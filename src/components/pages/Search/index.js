@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-// import API from "../utils/API"
+import API from "../utils/API"
+import SearchForm from "..components/SearchForm"
 
 export default class Search extends Component {
     state = {
@@ -17,7 +18,11 @@ export default class Search extends Component {
     render() {
         return (
             <div>
-                
+                <h1>Search for your favorite dog breed:</h1>
+                <SearchForm
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+                />
             </div>
         )
     }
