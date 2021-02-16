@@ -2,22 +2,16 @@ import React from "react";
 import "./style.css";
 
 function SearchResultCard(props) {
+    const list = props.results || [];
   return (
-    <div className="card">
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
+    list.map(results => (
+        <div className="card">
+        <div className="img-container">
+          <img alt="dog photo" className="img-fluid" src={results}  />
+        </div>
       </div>
-      <div className="content">
-        <ul>
-          <li>
-            <strong>Name:</strong> {props.name}
-          </li>
-        </ul>
-      </div>
-      {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
-        𝘅
-      </span> */}
-    </div>
+
+    ))
   );
 }
 
