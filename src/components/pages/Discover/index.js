@@ -12,6 +12,13 @@ export default class Discover extends Component {
         API.random().then(({ data: { message } }) => this.setState({ image: message }));
     }
 
+    // event handler function for thumbs up, increments friends 20% of the time
+    // thumbs down will just call getNewPup() so we can use that as the event handler
+    handleThumbsUp = event => {
+        if (Math.random() >= 0.8) this.setState({ friends: this.state.friends + 1 });
+        this.getNewPup();
+    }
+
     render() {
         return (
             <div className="container">
