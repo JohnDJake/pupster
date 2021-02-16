@@ -1,5 +1,5 @@
 import React from "react";
-import SearchResultCard from "../SearchResultCard/SearchResultCard"
+import SearchResultCard from "../SearchResultCard"
 
 function SearchResultContainer(props) {
 
@@ -9,3 +9,5 @@ function SearchResultContainer(props) {
 </div>
   )
 }
+
+export default SearchResultContainer;
