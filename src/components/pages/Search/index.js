@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import API from "../utils/API"
-import SearchForm from "..components/SearchForm"
+import API from "../../../utils/API"
+import SearchForm from "../../SearchForm"
+// import SearchResultContainer from "../../SearchResultContainer"
 
 export default class Search extends Component {
     state = {
@@ -21,7 +22,7 @@ export default class Search extends Component {
     handleFormSubmit = event =>{
         event.preventDefault();
         API.search(this.state.search)
-        .then(this.setState({results: res.data.message}))
+        .then(res=>{this.setState({results: res.data.message})})
         .catch(err => this.setState({ error: err.message }));
     }
 
