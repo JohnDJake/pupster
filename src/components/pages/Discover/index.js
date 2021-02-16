@@ -8,6 +8,10 @@ export default class Discover extends Component {
         API.random().then(({ data: { message } }) => this.setState({ image: message }));
     }
 
+    getNewPup() {
+        API.random().then(({ data: { message } }) => this.setState({ image: message }));
+    }
+
     render() {
         return (
             <div className="container">
